@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Afghanistan</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+   <div class="logo">
+    <img src="images/logo1.jpeg" alt="logo">
+  <h2>Discover Afghanistan</h2>
+
+   </div>
+   <div class="menu-icon" onclick="toggleMenu()">
+  ☰
+</div>
+  <ul id="navMenu">
+
+    <li>
+      <a href="#home" id="homeLink">Home</a>
+    </li>
+
+    <li>
+      <a href="#destinations" id="destinationLink">Destinations</a>
+    </li>
+
+    <li>
+      <a href="#gallery" id="galleryLink">Gallery</a>
+    </li>
+
+    <li>
+      <a href="#about" id="aboutLink">About</a>
+    </li>
+
+    <li>
+      <a href="#contact" id="contactLink">Contact</a>
+    </li>
+     
+  
+  </ul>
+  <button id="langBtn">
+  فارسی
+</button>
+  <button id="darkModeBtn">
+      Dark mode
+    </button>
+
+</nav>
+
+  <section class="hero" id="home">
+    <h1 id="heroTitle" data-key="heroTitle">Discover Afghanistan</h1>
+
+    <p id="heroText">
+      Discover the beauty of Kabul, Badakhshan, Bamyan,
+      Herat and Mazar-e-Sharif.
+    </p>
+
+    <a href="#destinations" id="exploreBtn" class="explore-btn">Explore Now</a>
+    <button id="learnBtn" onclick="showMessage()">
+      learn More
+    </button>
+  </section>
+  <section class="search-section">
+     <h2 id="searchTitle">Search Destination</h2>
+     <input
+     type="text"
+     id="searchInput"
+     placeholder="Search city...">
+  </section>
+  <section class="destinations" id="destinations">
+
+  <h2 id="destTitle">Popular Destinations</h2>
+
+  <div class="container" id="container">
+
+    
+<div class="card">
+
+  <img src="images/kabul.jpg" alt="Kabul">
+
+  <h3 id="kabulName">Kabul</h3>
+
+  <p id="kabulText">
+    The capital city of Afghanistan and the heart of the country.
+  </p>
+
+  <button id="kabulBtn" onclick="showKabulInfo()">
+  Read More
+</button>
+
+<p id="kabulInfo"></p>
+
+
+<p>
+  Rating:
+  <span id="kabulRating">0</span>
+</p>
+
+<button onclick="rateKabul()">
+  ⭐ Rate
+</button>
+
+</div>
+
+
+<div class="card">
+
+  <img src="images/badakhshan.jpg" alt="Badakhshan">
+
+  <h3 id="badakhshanName">Badakhshan</h3>
+
+  <p id="badakhshanText">
+    Famous for the Wakhan Corridor and the beautiful Pamir Mountains.
+  </p>
+  <button id="badakhshanBtn" onclick="showBadakhshanInfo()">
+  Read More
+</button>
+
+<p id="badakhshanInfo"></p>
+
+<p>
+  Rating:
+  <span id="badakhshanRating">0</span>
+</p>
+
+<button onclick="rateBadakhshan()">
+  ⭐ Rate
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+  <img src="images/bamyan.jpg" alt="Bamyan">
+
+  <h3 id="bamyanName">Bamyan</h3>
+
+  <p id="bamyanText">
+    A historic valley known for culture, mountains and natural beauty.
+    Afghanistan's first national park with stunning blue lakes.
+  </p>
+  <button id="bamyanBtn" onclick="showBamyanInfo()">
+  Read More
+</button>
+
+<p id="bamyanInfo"></p>
+
+<p>
+  Rating:
+  <span id="bamyanRating">0</span>
+</p>
+
+<button onclick="rateBamyan()">
+  ⭐ Rate
+</button>
+
+</div>
+
+
+<div class="card">
+
+  <img src="images/harat.jpg" alt="Herat">
+
+  <h3 id="heratName">Herat</h3>
+
+  <p id="heratText">
+    One of Afghanistan's most historic cities, rich in art and culture.
+  </p>
+  <button id="heratBtn" onclick="showHeratInfo()">
+  Read More
+</button>
+
+<p id="heratInfo"></p>
+<p>
+  Rating:
+  <span id="heratRating">0</span>
+</p>
+
+<button onclick="rateHerat()">
+  ⭐ Rate
+</button>
+
+</div>
+
+
+<div class="card">
+
+  <img src="images/mazar.jpg" alt="Mazar-e-Sharif">
+
+  <h3 id="mazarName">Mazar-e-Sharif</h3>
+
+  <p id="mazarText">
+    Home to the famous Blue Mosque and one of the country's cultural centers.
+  </p>
+  <button id="mazarBtn" onclick="showMazarInfo()">
+  Read More
+</button>
+
+<p id="mazarInfo"></p>
+<p>
+  Rating:
+  <span id="mazarRating">0</span>
+</p>
+
+<button onclick="rateMazar()">
+  ⭐ Rate
+</button>
+
+</div>
+</div>
+</section>
+
+<section class="gallery" id="gallery">
+
+  <h2 id="PhotoTitle">Photo Gallery</h2>
+
+  <div class="gallery-container">
+
+    <img src="images/kabul1.jpg" alt="Kabul">
+
+    <img src="images/badakhshan1.jpg" alt="Badakhshan">
+
+    <img src="images/bamyan1.jpg" alt="Bamyan">
+
+    <img src="images/herat1.jpg" alt="Herat">
+
+    <img src="images/mazar1.jpg" alt="Mazar-e-Sharif">
+
+  </div>
+
+
+  <h2 id="sliderTitle">Image Slider</h2>
+
+  <div class="slider">
+
+    <button onclick="prevImage()">❮</button>
+
+    <img id="sliderImage" src="images/kabul1.jpg" alt="Gallery Image">
+
+    <button onclick="nextImage()">❯</button>
+
+  </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+  <h2 id="aboutTitle">About Afghanistan</h2>
+
+  <p id="aboutText" data-key="aboutText">
+    Afghanistan is a beautiful country with rich history,
+    culture, and natural landscapes. From the mountains of
+    Badakhshan to the lakes of Bamyan and the historic cities
+    like Herat and Kabul, it is full of amazing places to explore.
+  </p>
+
+</section>
+
+<section class="map-section">
+
+  <h2 id="locationTitle">Location of Afghanistan</h2>
+
+  <iframe
+    src="https://www.google.com/maps?q=Afghanistan&output=embed"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+
+</section>
+
+<section class="weather">
+
+  <h2 id="weatherTitle">Weather in Afghanistan</h2>
+
+  <div class="weather-container">
+
+    <div class="weather-card">
+      <h3>Kabul</h3>
+      <p>☀️ 25°C</p>
+    </div>
+
+    <div class="weather-card">
+      <h3>Badakhshan</h3>
+      <p>⛅ 18°C</p>
+    </div>
+
+    <div class="weather-card">
+      <h3>Bamyan</h3>
+      <p>🌤️ 20°C</p>
+    </div>
+
+    <div class="weather-card">
+      <h3>Herat</h3>
+      <p>☀️ 28°C</p>
+    </div>
+
+    <div class="weather-card">
+      <h3>Mazar-e-Sharif</h3>
+      <p>☀️ 30°C</p>
+    </div>
+
+  </div>
+
+</section>
+<section class="attractions">
+
+  <h2 id="attractionTitle">Popular Attractions</h2>
+
+  <div class="attractions-container">
+
+    <div class="attraction-card">
+      <h3>Band-e-Amir</h3>
+      <p>Bamyan</p>
+    </div>
+
+    <div class="attraction-card">
+      <h3>Wakhan Corridor</h3>
+      <p>Badakhshan</p>
+    </div>
+
+    <div class="attraction-card">
+      <h3>Babur Garden</h3>
+      <p>Kabul</p>
+    </div>
+
+    <div class="attraction-card">
+      <h3>Herat Citadel</h3>
+      <p>Herat</p>
+    </div>
+
+    <div class="attraction-card">
+      <h3>Blue Mosque</h3>
+      <p>Mazar-e-Sharif</p>
+    </div>
+
+  </div>
+
+</section>
+<section class="contact" id="contact">
+
+  <h2 id="contactTitle">Contact Us</h2>
+
+  <form onsubmit="sendMessage(event)"> 
+
+    <input type="text" placeholder="Your Name">
+
+    <input type="email" placeholder="Your Email">
+
+    <textarea placeholder="Your Message"></textarea>
+
+    <button id="sendBtn" type="submit">Send Message</button>
+
+  </form>
+
+</section>
+
+<section class="visitor-section">
+
+  <h2 id="visitorTitle">Visitors</h2>
+
+  <p id="visitorText">
+    Total Visitors:
+    <span id="visitorCount">0</span>
+  </p>
+
+</section>
+
+<section class="testimonials">
+
+  <h2 id="reviewTitle">Visitor Reviews</h2>
+
+  <div class="review-card">
+    <p>"Afghanistan is a beautiful country with amazing nature."</p>
+    <h4>⭐⭐⭐⭐⭐ - Sarah</h4>
+  </div>
+
+  <div class="review-card">
+    <p>"Badakhshan and Bamyan were unforgettable."</p>
+    <h4>⭐⭐⭐⭐⭐ - Ahmad</h4>
+  </div>
+
+</section>
+
+
+
+<section class="video-section">
+  <h2 id="videoTitle">Explore Afghanistan Video</h2>
+
+  <video controls width="700">
+    <source src="vidoe AF.mp4" type="video/mp4">
+  </video>
+
+</section>
+
+<footer>
+  <h3>Discover Afghanistan </h3>
+  <p>
+    Discover the beaty, culture and history of Afghanistan.
+  </p>
+  <p>
+  © 2026 Discover Afghanistan. All Rights Reserved.
+</p>
+<div class="social-links">
+  <a href="#">Facebook</a>
+  <a href="#">instagram</a>
+  <a href="#">youTube</a>
+</div>
+</footer>
+<button id="topBtn" onclick="topFunction()">
+  ↑
+</button>
+<script src="script.js"></script>
+</body>
+
+</html>
